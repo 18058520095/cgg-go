@@ -1,0 +1,24 @@
+# 下载产物（downloader 运行时生成）
+go.dev
+doc
+pkg.go.dev
+
+# 运行时数据
+todos.json
+
+# Go 编译产物
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+todo
+bookapi
+downloader
+
+# 编辑器/系统
+.DS_Store
+.idea/
+.vscode/
