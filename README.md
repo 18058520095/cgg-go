@@ -1,3 +1,5 @@
+# cgg-go
+
 todo
 综合运用flag，结构体，文件读写，实现一个可持续化的代办管理 
 CLi：支持 add list done 命令
