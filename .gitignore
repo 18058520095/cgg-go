@@ -21,3 +21,7 @@ drogon.log
 
 # 前端构建产物
 webdisk/frontend/dist/
+
+# 本地工具与依赖目录
+.deps/
+.vscode/
