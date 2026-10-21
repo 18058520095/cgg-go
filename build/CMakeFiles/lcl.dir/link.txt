@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblcl.a CMakeFiles/lcl.dir/src/file/FileDescriptor.cpp.o CMakeFiles/lcl.dir/src/net/SocketAddress.cpp.o CMakeFiles/lcl.dir/src/net/Socket.cpp.o CMakeFiles/lcl.dir/src/net/Epoll.cpp.o CMakeFiles/lcl.dir/src/net/TcpClient.cpp.o CMakeFiles/lcl.dir/src/net/ChatRoom.cpp.o
+/usr/bin/ranlib liblcl.a

@@ -1,0 +1,72 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: goshop-redis-pvc
+  namespace: goshop
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: goshop-redis
+  namespace: goshop
+  labels:
+    app: goshop-redis
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: goshop-redis
+  template:
+    metadata:
+      labels:
+        app: goshop-redis
+    spec:
+      containers:
+        - name: redis
+          image: redis:7-alpine
+          ports:
+            - containerPort: 6379
+          args: ["redis-server", "--appendonly", "yes"]
+          volumeMounts:
+            - name: redis-data
+              mountPath: /data
+          resources:
+            requests:
+              cpu: 100m
+              memory: 64Mi
+            limits:
+              cpu: 500m
+              memory: 256Mi
+          readinessProbe:
+            exec:
+              command: ["redis-cli", "ping"]
+            initialDelaySeconds: 5
+            periodSeconds: 5
+          livenessProbe:
+            exec:
+              command: ["redis-cli", "ping"]
+            initialDelaySeconds: 10
+            periodSeconds: 10
+      volumes:
+        - name: redis-data
+          persistentVolumeClaim:
+            claimName: goshop-redis-pvc
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: goshop-redis
+  namespace: goshop
+spec:
+  selector:
+    app: goshop-redis
+  ports:
+    - port: 6379
+      targetPort: 6379
+  clusterIP: None

@@ -1,0 +1,32 @@
+[  0%] Built target LINK_HEADERS
+[  7%] Building CXX object src/base/CMakeFiles/base.dir/ErrorCode.cc.o
+[ 11%] Building CXX object src/util/CMakeFiles/util.dir/MysqlUtil.cc.o
+[  7%] Building CXX object src/base/CMakeFiles/base.dir/Compress.cc.o
+[ 15%] Building CXX object src/base/CMakeFiles/base.dir/base64.cc.o
+[ 19%] Building CXX object src/base/CMakeFiles/base.dir/SysInfo.cc.o
+[ 23%] Building CXX object src/core/CMakeFiles/core.dir/BluePrint.cc.o
+[ 26%] Building CXX object src/util/CMakeFiles/util.dir/FileUtil.cc.o
+[ 30%] Building CXX object src/util/CMakeFiles/util.dir/PathUtil.cc.o
+[ 34%] Building CXX object src/util/CMakeFiles/util.dir/StrUtil.cc.o
+[ 38%] Building CXX object src/base/CMakeFiles/base.dir/Timestamp.cc.o
+[ 42%] Building CXX object src/util/CMakeFiles/util.dir/UriUtil.cc.o
+[ 46%] Building CXX object src/core/CMakeFiles/core.dir/HttpContent.cc.o
+[ 50%] Building CXX object src/core/CMakeFiles/core.dir/HttpFile.cc.o
+[ 53%] Building CXX object src/util/CMakeFiles/util.dir/CodeUtil.cc.o
+[ 57%] Building CXX object src/core/CMakeFiles/core.dir/HttpServerTask.cc.o
+[ 61%] Building CXX object src/base/CMakeFiles/base.dir/Json.cc.o
+[ 65%] Building CXX object src/core/CMakeFiles/core.dir/RouteTable.cc.o
+[ 69%] Building CXX object src/core/CMakeFiles/core.dir/Aspect.cc.o
+[ 69%] Built target util
+[ 73%] Building CXX object src/core/CMakeFiles/core.dir/HttpDef.cc.o
+[ 76%] Building CXX object src/core/CMakeFiles/core.dir/HttpServer.cc.o
+[ 80%] Building CXX object src/core/CMakeFiles/core.dir/Router.cc.o
+[ 84%] Building CXX object src/core/CMakeFiles/core.dir/HttpCookie.cc.o
+[ 84%] Built target base
+[ 88%] Building CXX object src/core/CMakeFiles/core.dir/HttpMsg.cc.o
+[ 92%] Building C object src/core/CMakeFiles/core.dir/MultiPartParser.c.o
+[ 96%] Building CXX object src/core/CMakeFiles/core.dir/FileCache.cc.o
+[ 96%] Built target core
+[100%] Linking CXX static library /root/go_lib/.deps/wfrest/_lib/libwfrest.a
+[100%] Built target wfrest
+[100%] Built target SCRIPT_SHARED_LIB

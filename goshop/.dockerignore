@@ -1,0 +1,29 @@
+# Git
+.git
+.gitignore
+
+# Go
+bin/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# 环境文件
+.env
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# 文档
+README.md
+docs/
+
+# 部署文件
+deployments/

@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: goshop-config
+  namespace: goshop
+data:
+  APP_PORT: "8080"
+  APP_MODE: "release"
+  DB_HOST: "goshop-mysql"
+  DB_PORT: "3306"
+  DB_NAME: "goshop"
+  DB_CHARSET: "utf8mb4"
+  REDIS_HOST: "goshop-redis"
+  REDIS_PORT: "6379"
+  REDIS_DB: "0"
+  JWT_EXPIRE_HOURS: "24"
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: goshop-secret
+  namespace: goshop
+type: Opaque
+stringData:
+  DB_USER: root
+  DB_PASSWORD: root
+  REDIS_PASSWORD: ""
+  JWT_SECRET: goshop-prod-secret-change-me-please

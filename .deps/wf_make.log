@@ -1,0 +1,110 @@
+[  0%] Built target LINK_HEADERS
+[  1%] Building CXX object src/client/CMakeFiles/client.dir/WFDnsClient.cc.o
+[  3%] Building CXX object src/protocol/CMakeFiles/protocol.dir/PackageWrapper.cc.o
+[  6%] Building CXX object src/manager/CMakeFiles/manager.dir/DnsCache.cc.o
+[  6%] Building CXX object src/factory/CMakeFiles/factory.dir/WFGraphTask.cc.o
+[  8%] Building CXX object src/kernel/CMakeFiles/kernel.dir/IOService_linux.cc.o
+[ 10%] Building CXX object src/server/CMakeFiles/server.dir/WFServer.cc.o
+[ 13%] Building CXX object src/nameservice/CMakeFiles/nameservice.dir/WFNameService.cc.o
+[ 13%] Building C object src/util/CMakeFiles/util.dir/json_parser.c.o
+[ 15%] Building C object src/kernel/CMakeFiles/kernel.dir/mpoller.c.o
+[ 16%] Building CXX object src/protocol/CMakeFiles/protocol.dir/SSLWrapper.cc.o
+[ 18%] Building C object src/kernel/CMakeFiles/kernel.dir/poller.c.o
+[ 20%] Building CXX object src/util/CMakeFiles/util.dir/EncodeStream.cc.o
+/root/go_lib/.deps/workflow/src/kernel/poller.c: In function '__poller_handle_event':
+/root/go_lib/.deps/workflow/src/kernel/poller.c:904:17: warning: ignoring return value of 'write' declared with attribute 'warn_unused_result' [-Wunused-result]
+  904 |                 write(node->data.fd, &cnt, sizeof (unsigned long long));
+      |                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/root/go_lib/.deps/workflow/src/kernel/poller.c: In function 'poller_del':
+/root/go_lib/.deps/workflow/src/kernel/poller.c:1456:25: warning: ignoring return value of 'write' declared with attribute 'warn_unused_result' [-Wunused-result]
+ 1456 |                         write(poller->pipe_wr, &node, sizeof (void *));
+      |                         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/root/go_lib/.deps/workflow/src/kernel/poller.c: In function 'poller_mod':
+/root/go_lib/.deps/workflow/src/kernel/poller.c:1499:33: warning: ignoring return value of 'write' declared with attribute 'warn_unused_result' [-Wunused-result]
+ 1499 |                                 write(poller->pipe_wr, &orig, sizeof (void *));
+      |                                 ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/root/go_lib/.deps/workflow/src/kernel/poller.c: In function 'poller_stop':
+/root/go_lib/.deps/workflow/src/kernel/poller.c:1658:9: warning: ignoring return value of 'write' declared with attribute 'warn_unused_result' [-Wunused-result]
+ 1658 |         write(poller->pipe_wr, &p, sizeof (void *));
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[ 22%] Building CXX object src/manager/CMakeFiles/manager.dir/RouteManager.cc.o
+[ 23%] Building CXX object src/factory/CMakeFiles/factory.dir/DnsTaskImpl.cc.o
+[ 25%] Building CXX object src/nameservice/CMakeFiles/nameservice.dir/WFDnsResolver.cc.o
+[ 27%] Building CXX object src/server/CMakeFiles/server.dir/WFMySQLServer.cc.o
+[ 28%] Building C object src/protocol/CMakeFiles/protocol.dir/dns_parser.c.o
+[ 30%] Building CXX object src/util/CMakeFiles/util.dir/StringUtil.cc.o
+[ 32%] Building C object src/kernel/CMakeFiles/kernel.dir/rbtree.c.o
+[ 33%] Building CXX object src/protocol/CMakeFiles/protocol.dir/DnsMessage.cc.o
+[ 35%] Building CXX object src/client/CMakeFiles/client.dir/WFHttpChunkedClient.cc.o
+[ 37%] Building C object src/kernel/CMakeFiles/kernel.dir/msgqueue.c.o
+[ 38%] Building CXX object src/util/CMakeFiles/util.dir/URIParser.cc.o
+[ 40%] Building C object src/kernel/CMakeFiles/kernel.dir/thrdpool.c.o
+[ 42%] Building CXX object src/kernel/CMakeFiles/kernel.dir/CommRequest.cc.o
+[ 44%] Building CXX object src/manager/CMakeFiles/manager.dir/WFGlobal.cc.o
+[ 45%] Building CXX object src/kernel/CMakeFiles/kernel.dir/CommScheduler.cc.o
+[ 45%] Built target server
+[ 47%] Building CXX object src/nameservice/CMakeFiles/nameservice.dir/WFServiceGovernance.cc.o
+[ 49%] Building CXX object src/protocol/CMakeFiles/protocol.dir/DnsUtil.cc.o
+[ 50%] Building CXX object src/client/CMakeFiles/client.dir/WFRedisSubscriber.cc.o
+[ 52%] Building CXX object src/factory/CMakeFiles/factory.dir/WFTaskFactory.cc.o
+/root/go_lib/.deps/workflow/src/kernel/CommScheduler.cc: In member function 'virtual CommTarget* CommSchedGroup::acquire(int)':
+/root/go_lib/.deps/workflow/src/kernel/CommScheduler.cc:437:16: warning: 'target' may be used uninitialized [-Wmaybe-uninitialized]
+  437 |         return target;
+      |                ^~~~~~
+/root/go_lib/.deps/workflow/src/kernel/CommScheduler.cc:399:26: note: 'target' was declared here
+  399 |         CommSchedTarget *target;
+      |                          ^~~~~~
+[ 52%] Built target util
+[ 54%] Building CXX object src/kernel/CMakeFiles/kernel.dir/Communicator.cc.o
+[ 55%] Building CXX object src/manager/CMakeFiles/manager.dir/UpstreamManager.cc.o
+[ 57%] Building CXX object src/nameservice/CMakeFiles/nameservice.dir/UpstreamPolicies.cc.o
+[ 59%] Building C object src/protocol/CMakeFiles/protocol.dir/http_parser.c.o
+[ 61%] Building CXX object src/protocol/CMakeFiles/protocol.dir/HttpMessage.cc.o
+In file included from /root/go_lib/.deps/workflow/src/kernel/Communicator.cc:36:
+In function 'int mpoller_add(const poller_data*, int, mpoller_t*)',
+    inlined from 'void Communicator::handle_listen_result(poller_result*)' at /root/go_lib/.deps/workflow/src/kernel/Communicator.cc:1102:20:
+/root/go_lib/.deps/workflow/src/kernel/mpoller.h:55:26: warning: 'timeout' may be used uninitialized [-Wmaybe-uninitialized]
+   55 |         return poller_add(data, timeout, mpoller->poller[index]);
+      |                ~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/root/go_lib/.deps/workflow/src/kernel/Communicator.cc: In member function 'void Communicator::handle_listen_result(poller_result*)':
+/root/go_lib/.deps/workflow/src/kernel/Communicator.cc:1067:13: note: 'timeout' was declared here
+ 1067 |         int timeout;
+      |             ^~~~~~~
+/root/go_lib/.deps/workflow/src/kernel/Communicator.cc: In member function 'void Communicator::handle_sleep_result(poller_result*)':
+/root/go_lib/.deps/workflow/src/kernel/Communicator.cc:1228:24: warning: 'state' may be used uninitialized [-Wmaybe-uninitialized]
+ 1228 |         session->handle(state, res->error);
+      |         ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+/root/go_lib/.deps/workflow/src/kernel/Communicator.cc:1211:13: note: 'state' was declared here
+ 1211 |         int state;
+      |             ^~~~~
+[ 62%] Building CXX object src/client/CMakeFiles/client.dir/WFMySQLConnection.cc.o
+[ 64%] Building CXX object src/kernel/CMakeFiles/kernel.dir/Executor.cc.o
+[ 66%] Building CXX object src/kernel/CMakeFiles/kernel.dir/SubTask.cc.o
+[ 67%] Building CXX object src/protocol/CMakeFiles/protocol.dir/HttpUtil.cc.o
+[ 69%] Building CXX object src/protocol/CMakeFiles/protocol.dir/TLVMessage.cc.o
+[ 69%] Built target kernel
+[ 71%] Building CXX object src/factory/CMakeFiles/factory.dir/Workflow.cc.o
+[ 71%] Built target manager
+[ 72%] Building CXX object src/factory/CMakeFiles/factory.dir/HttpTaskImpl.cc.o
+[ 74%] Building CXX object src/factory/CMakeFiles/factory.dir/WFResourcePool.cc.o
+[ 76%] Building C object src/protocol/CMakeFiles/protocol.dir/mysql_stream.c.o
+[ 77%] Building CXX object src/client/CMakeFiles/client.dir/WFConsulClient.cc.o
+[ 79%] Building CXX object src/factory/CMakeFiles/factory.dir/WFMessageQueue.cc.o
+[ 81%] Building C object src/protocol/CMakeFiles/protocol.dir/mysql_parser.c.o
+[ 83%] Building CXX object src/factory/CMakeFiles/factory.dir/FileTaskImpl.cc.o
+[ 84%] Building C object src/protocol/CMakeFiles/protocol.dir/mysql_byteorder.c.o
+[ 86%] Building CXX object src/protocol/CMakeFiles/protocol.dir/MySQLMessage.cc.o
+[ 88%] Building CXX object src/factory/CMakeFiles/factory.dir/MySQLTaskImpl.cc.o
+[ 88%] Built target nameservice
+[ 89%] Building CXX object src/protocol/CMakeFiles/protocol.dir/MySQLResult.cc.o
+[ 91%] Building CXX object src/factory/CMakeFiles/factory.dir/RedisTaskImpl.cc.o
+[ 93%] Building CXX object src/protocol/CMakeFiles/protocol.dir/MySQLUtil.cc.o
+[ 94%] Building C object src/protocol/CMakeFiles/protocol.dir/redis_parser.c.o
+[ 96%] Building CXX object src/protocol/CMakeFiles/protocol.dir/RedisMessage.cc.o
+[ 96%] Built target protocol
+[ 96%] Built target factory
+[ 96%] Built target client
+[ 98%] Linking CXX shared library /root/go_lib/.deps/workflow/_lib/libworkflow.so
+[100%] Linking CXX static library /root/go_lib/.deps/workflow/_lib/libworkflow.a
+[100%] Built target workflow-static
+[100%] Built target workflow-shared
