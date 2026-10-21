@@ -1,7 +1,0 @@
-/root/go_lib/build/CMakeFiles/lcl.dir
-/root/go_lib/build/CMakeFiles/chat_server.dir
-/root/go_lib/build/CMakeFiles/chat_client.dir
-/root/go_lib/build/CMakeFiles/test_chat.dir
-/root/go_lib/build/CMakeFiles/test.dir
-/root/go_lib/build/CMakeFiles/edit_cache.dir
-/root/go_lib/build/CMakeFiles/rebuild_cache.dir

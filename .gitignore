@@ -1,0 +1,23 @@
+# CMake out-of-source build output
+/build/
+**/build/
+cmake-build-*/
+
+# 编译产物
+goshop/bin/
+*.exe
+*.out
+
+# 依赖与第三方源码
+.deps/workflow/
+.deps/wfrest/
+node_modules/
+
+# 运行时数据
+webdisk/tmp/
+webdisk/uploads/
+*.log
+drogon.log
+
+# 前端构建产物
+webdisk/frontend/dist/

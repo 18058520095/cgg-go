@@ -1,11 +1,14 @@
 package router
 
 import (
+	"net/http"
+
 	"goshop/internal/middleware"
 	"goshop/internal/modules/auth"
 	"goshop/internal/modules/cart"
 	"goshop/internal/modules/order"
 	"goshop/internal/modules/product"
+	"goshop/internal/webui"
 
 	"github.com/gin-gonic/gin"
 )
@@ -19,6 +22,11 @@ func Setup(r *gin.Engine) {
 	// 健康检查
 	r.GET("/health", func(c *gin.Context) {
 		c.JSON(200, gin.H{"status": "ok"})
+	})
+
+	// 前端单页（内嵌，无需额外静态文件）
+	r.GET("/", func(c *gin.Context) {
+		c.Data(http.StatusOK, "text/html; charset=utf-8", webui.IndexHTML)
 	})
 
 	api := r.Group("/api/v1")

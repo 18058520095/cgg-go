@@ -1,1 +1,0 @@
-/usr/bin/g++  -Wall -Wextra -Wpedantic -g CMakeFiles/chat_client.dir/apps/chat_client.cpp.o -o chat_client  liblcl.a 

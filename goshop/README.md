@@ -31,6 +31,7 @@ goshop/
 │   │   ├── cart/            # 购物车
 │   │   └── order/           # 订单（事务处理）
 │   ├── router/              # 路由注册
+│   ├── webui/               # 内嵌前端单页（HTML+JS，零依赖）
 │   └── utils/               # 工具（JWT/密码/响应封装）
 ├── deployments/
 │   ├── docker/              # Dockerfile & init.sql
@@ -61,6 +62,18 @@ go run ./cmd/server
 ```bash
 docker compose up -d --build
 ```
+
+## 前端页面
+
+项目内置一个零依赖单页商城前端（`internal/webui/index.html`，通过 `go:embed` 打进二进制，无需额外静态资源）。
+
+启动服务后，浏览器打开 `http://localhost:8090/` 即可使用：
+
+- 右上角「登录 / 注册」→ 登录后获得 Token（保存在 localStorage）
+- 商品区：搜索、分页、加入购物车
+- 购物车抽屉：修改数量、删除、勾选结算
+- 我的订单：查看订单列表、取消未支付订单（库存自动恢复）
+- 管理员账号登录后，工具栏会出现「上架商品」按钮
 
 ## API 接口
 
